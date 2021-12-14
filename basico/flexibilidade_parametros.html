@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flexibilidade de Parametros</title>
+</head>
+<body>
+    <script>
+        function soma (a, b) {
+            console.log(a)
+            console.log(b)
+            return a + b
+        }
+
+        function soma2 (a, b) {
+            b = b === undefined ? 0 : b
+            console.log(a)
+            console.log(b)
+            return a + b
+        }
+
+        // Chamada com os parametros corretos
+        console.log(soma(7, 8)) // retorna 15
+
+        // Chamada faltando parametros
+        console.log(soma(7)) 
+        /*
+            Neste caso aos parametros não definidos sera atribuido o valor undefined e a função retornará not a number(NaN),
+            o interessante é que no JavaScript isso não nos retorna um erro como em outras linguagens
+        */
+
+       // Chamada faltando parametros, mas com tratamento na função
+       console.log(soma2(7))
+
+       // Chamada com excesso de parametros
+       console.log(soma2(7, 8, 10, 55))
+       /*
+            Neste caso aos parametros adicionais serão ignorados, o interessante é que no JavaScript isso também não nos 
+            retorna um erro
+        */
+    </script>
+</body>
+</html>

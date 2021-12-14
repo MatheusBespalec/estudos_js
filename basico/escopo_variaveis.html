@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Escopo de Variaveis</title>
+</head>
+<body>
+    <script>
+        // Escopo de Bloco
+            
+            if (true) {
+                var filme = 'Vingadores'
+                let filme2 = 'Homem Aranha'
+            }
+
+            // Disponivel dentro do ecopo global
+            document.write('<p>' + filme + '</p>')
+            document.write('<p>' + filme2 + '</p>')
+
+            // Disponivel dentro do ecopo de função
+            function y() {
+                document.write('<p>' + filme + '</p>')
+                document.write('<p>' + filme2 + '</p>')
+            }
+            y()
+
+            /*
+            * Neste caso as variaveis declaradas com var dentro do escopo de bloco são ELEVADAS por 'hoisting'
+            * Hoisting JavaScript é o deslocamento da declaração de todas as variáveis e funções para o topo do código.
+            * As variaveis declaradas let ou const retornara o erro 'is not defined'
+            */
+    </script>
+</body>
+</html>

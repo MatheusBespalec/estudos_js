@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Funções</title>
+</head>
+<body>
+    <script>
+        var callbackSuccess = function() {
+            document.write('Callback de Sucesso')
+        }
+        var callbackError = function() {
+            document.write('Callback de Erro')
+        }
+
+        function test(response, success, error) {
+            if (response) {
+                success()
+            } else {
+                error()
+            }
+        }
+
+        /* 
+        * Aqui funções wraper não devem ser passadas com () pois o JS interpreta que o retorno da função que sera 
+        * passado como parametro, então passamos como variavel e dentro a função executamos a função wraper
+        */
+        test(false, callbackSuccess, callbackError)
+    </script>
+</body>
+</html>
