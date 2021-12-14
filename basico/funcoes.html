@@ -8,11 +8,12 @@
 </head>
 <body>
     <script>
+        // Funções wrapper e callback
         var callbackSuccess = function() {
-            document.write('Callback de Sucesso')
+            document.write('Callback de Sucesso <br>')
         }
         var callbackError = function() {
-            document.write('Callback de Erro')
+            document.write('Callback de Erro <br>')
         }
 
         function test(response, success, error) {
@@ -28,6 +29,30 @@
         * passado como parametro, então passamos como variavel e dentro a função executamos a função wraper
         */
         test(false, callbackSuccess, callbackError)
+        // Sobre Data
+        var now = new Date()
+        var newYear = new Date(now.getFullYear() + 1, 0, 1)
+
+        document.write(newYear.toString())
+        document.write('<br>')
+        document.write(now.toString())
+        document.write('<br>')
+
+        var timeLeft = newYear.getTime() - now.getTime()
+        var day = (24 * 60 * 60 * 1000) 
+        var hour = (60 * 60 * 1000) 
+        var daysLeft = Math.floor(timeLeft / day)
+        var hoursLeft = Math.floor(timeLeft / hour)
+        hoursLeft-= daysLeft * 24
+
+        document.write('Faltam ' + daysLeft + ' dias e ' + hoursLeft + ' horas para o ano novo!')
+
+        /*
+        * Diferente das funções matematicas onde usamos 'Math.<nome_da_funcao>' e das funções de string onde só chamos o
+        * a função como em 'varComTexto.replace(',', '.')', as funções de data temos que instanciar um objeto que pode
+        * receber parametros para pegar um data especifica, assim: 
+        * new Date(year, month, day, hours, minutes, seconds, milliseconds)
+        */ 
     </script>
 </body>
 </html>
