@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Seletores do DOM</title>
+</head>
+<body>
+    <input type="text" class="form-control" name="name" placeholder="Digite seu nome..." id="name">
+    <script>
+        console.log('Selecionar por ID:')
+        console.log(document.getElementById('name'))
+        // Retorna apenas 1 valor, afinal deve haver apenas 1 elemento por ID
+        console.log('Selecionar por nome da tag:')
+        console.log(document.getElementsByTagName('input'))
+        // Retorna um HTML Collection
+        console.log('Selecionar por nome:')
+        console.log(document.getElementsByName('name'))
+        // Retorna uma Node List
+        console.log('Selecionar por classe:')
+        console.log(document.getElementsByClassName('form-control'))
+        // Retorna um HTML Collection
+    </script>
+</body>
+</html>
