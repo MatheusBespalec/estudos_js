@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jogo Mata Mosquito</title>
+    <link rel="stylesheet" href="css/style.css">
+    <style>
+        html {
+            cursor: url('images/mata_mosca.png') 30 30, auto;
+        }
+    </style>
+</head>
+<body onresize="resize()">
+    <div class="panel">   
+        <div class="lives">
+            <img id="life1" src="images/coracao_cheio.png">
+            <img id="life2" src="images/coracao_cheio.png">
+            <img id="life3" src="images/coracao_cheio.png">
+        </div><!-- lives -->
+        <h3>Tempo Restante: <span id="timer"></span></h3>
+    </div><!-- panel -->
+    <script src="js/game.js"></script>
+</body>
+</html>
