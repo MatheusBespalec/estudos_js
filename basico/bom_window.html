@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BOM Window</title>
+</head>
+<body>
+    <button onclick="openWindow()">Abrir PopUp</button>
+    <button onclick="move()">Mover PopUp</button>
+    <button onclick="closeWindow()">Fechar PopUp</button>
+    <button onclick="window.blur()">Blur</button>
+    <button onclick="window.print()">Print</button>
+    <script>
+        var x
+        function openWindow() {
+            x = window.open('http://www.youtube.com', 'Teste', 'width=500, height=500')
+        }
+        function move() {
+            x.moveTo(500, 100)
+            x.focus()    
+        }
+        function closeWindow() {
+            x.close()
+        }
+
+        let language = window.navigator.language;
+        let myAppName = window.navigator.appName	
+        let myAppVersion = window.navigator.appVersion
+        document.write("<br> Linguagem do navegador: " + language)
+        document.write("<br> Nome navegador: " + myAppName)
+        document.write("<br> Versão Navegador: " + myAppVersion)
+    </script>
+</body>
+</html>
