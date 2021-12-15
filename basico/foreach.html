@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Foreach</title>
+</head>
+<body>
+    <script>
+        var names = []
+        names['x'] = 'Andre'
+        names['y'] = 'Ronaldo'
+        names['z'] = 'Ana'
+        names[1] = 'Jeferson'
+        names[20] = 'Carla'
+
+        names.forEach(function (value, index, array) {
+            console.log(value, index)
+            console.log(array)
+        })
+        // Notas: Foreach percorre apenas indicies numéricos, porém o 3° parametro retorna o array completo 
+    </script>
+</body>
+</html>
