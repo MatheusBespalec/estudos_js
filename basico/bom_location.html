@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BOM Window</title>
+</head>
+<body>
+    <button onclick="window.location.href = 'https://www.youtube.com'">YouTube</button>
+    <button onclick="window.location.hash = 'hashDeTeste'">Set Hash</button>
+    <button onclick="window.location.assign('https://www.w3schools.com')">Carregar novo documento</button>
+    <button onclick="window.location.reload()">Recarregar documento</button>
+    <button onclick="location.replace('https://www.w3schools.com');">Substituir documento atual</button>
+    <script>
+        document.write('<br> Origem:' + window.location.origin)
+        document.write('<br> Host:' + window.location.host)
+        document.write('<br> Hostname:' + window.location.hostname)
+        document.write('<br> Hash:' + window.location.hash)
+        document.write('<br> Pathname:' + window.location.pathname)
+        document.write('<br> Port:' + window.location.port)
+        document.write('<br> Protocol:' + window.location.protocol)
+        document.write('<br> Search:' + window.location.search)
+    </script>
+</body>
+</html>
