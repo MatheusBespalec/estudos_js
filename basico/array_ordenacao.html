@@ -1,25 +1,25 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ordenação de Arrays</title>
-</head>
-<body>
-    <script>
-        names = ['Ana', 'Roberto', 'Vinicius', 'Alfredo']
-        console.log(names.sort())
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Ordenação de Arrays</title>
+    </head>
+    <body>
+        <script>
+            names = ['Ana', 'Roberto', 'Vinicius', 'Alfredo']
+            console.log(names.sort())
 
-        numbers = [5, 6, 11 , 88, 45, 33 ,24]
-        // console.log(numbers.sort())
-        // Mantendo assim o resultado sera 11, 24, 33, 45, 5, 6, 88 pois o sort, por padrão, ordena em ordem alfabética
-        function order(a, b) {
-            return a - b
-        }
-        console.log(numbers.sort(order))
-        // passando como prametro uma função que recebe 2 atributos e retorna o primeiro menos o segundo(a - b) o sort 
-        // entende que deve ordernar numericamente
-    </script>
-</body>
+            numbers = [5, 6, 11 , 88, 45, 33 ,24]
+            // console.log(numbers.sort())
+            // Mantendo assim o resultado sera 11, 24, 33, 45, 5, 6, 88 pois o sort, por padrão, ordena em ordem alfabética
+            function order(a, b) {
+                return a - b
+            }
+            console.log(numbers.sort(order))
+            // passando como prametro uma função que recebe 2 atributos e retorna o primeiro menos o segundo(a - b) o sort 
+            // entende que deve ordernar numericamente
+        </script>
+    </body>
 </html>
