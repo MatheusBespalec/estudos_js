@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Destructuring parte 4</title>
+    </head>
+    <body>
+        <script>
+            // Com Array
+            let arr = [10, 20, 30, 40]
+            let [a, ...resto] = arr
+
+            console.log(a)
+            console.log(resto)
+
+            // Com Objetos
+            let obj = { a: 10, b: 20,c: 30, d:40 }
+            let { a: a2, ...resto2 } = obj
+
+            console.log(a2)
+            console.log(resto2)
+
+        </script>
+    </body>
+</html>

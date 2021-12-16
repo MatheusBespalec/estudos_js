@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Destructuring parte 1</title>
+</head>
+<body>
+    <script>
+        let frutas = ['Banana', 'Maçã', 'Uva', 'Morango']
+        let [f1 = 'Manga', f2, , f3, f4 = 'Maracuja'] = frutas
+
+        console.log(frutas)
+        console.log(f1, f2, f3, f4)
+        // -------------------------
+        let nomes = ['Robson', 'Larissa']
+        let [[ , ,fruta],] = [frutas, nomes]
+
+        console.log(fruta)
+    </script>
+</body>
+</html>
