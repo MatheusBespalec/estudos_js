@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pilar da Herança</title>
+</head>
+<body>
+    <script>
+        /*
+        * O polimorfismo é a sobrescrita de métodods
+        */
+       class Animal {
+           constructor(cor, peso) {
+               this.cor = cor
+               this.peso = peso
+           }
+
+           dormir() {
+               console.log('Dormindo...')
+           }
+       }
+
+       class Cachorro extends Animal {
+           constructor(orelhas, cor, peso) {
+               super(cor, peso)
+               this.orelhas = orelhas
+           }
+
+           rosnar() {
+               console.log('Cachorro rosnando!')
+           }
+           
+           correr() {
+               console.log('Cachorro correndo!')
+           }
+       }
+
+       class Passaro extends Animal {
+           constructor(bico, cor, peso) {
+               super(cor, peso)
+               this.bico = bico
+           }
+
+           voar() {
+               console.log('Passaro voando!')
+           }
+       }
+
+       class Papagaio extends Passaro {
+           constructor(sabeFalar, bico, cor, peso) {
+               super(bico, cor, peso)
+               this.sabeFalar = sabeFalar
+           }
+
+           falar() {
+                if (this.sabeFalar) {
+                    console.log('Papagaio falando...')
+                }
+           }
+       }
+
+       class Avestruz extends Passaro {
+            constructor(bico, cor, peso) {
+                super('Grande', 'Branco e Preto', 20)
+            }
+
+            enterrarCabeca() {
+                console.log('Enterrar a cabeça')
+            }
+            // Polimorfismo (sobrescrita do metodo voar da classe pai Passaro)
+            voar() {
+                console.log('Avestruz não voa!')
+            }
+       }
+
+       let avestruz = new Avestruz('Grande', 'Branco e Preto', 20)
+
+       avestruz.voar()
+       avestruz.enterrarCabeca()
+
+    </script>
+</body>
+</html>
