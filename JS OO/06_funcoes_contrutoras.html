@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Funções Contrutoras</title>
+</head>
+<body>
+    <script>
+        /*
+        * Funções contrutoras é a forma que tinhamos no JS ES5 para trabalhar com POO
+        */
+        let Carro = function() {
+            this.cor =  'Branco'
+            this.modelo =  'Chevette'
+            this.velocidadeAtual = 0
+            /*
+            * Para definir um atributo como privado nas funções contrutoras ao invés de usar this. declaramos com var,
+            * assim como variaveis declaradas dentro de uma função  não podem ser acessadas fora do escopo da função
+            * esta variavel não podera ser acessada de fora do objeto, além de não aparecer caso dessemos um console.log 
+            * no objeto.
+            */
+            var velocidadeMaxima = 180
+
+            this.getVelocidadeAtual = function() {
+                return this.velocidadeAtual
+            }
+
+            this.setVelocidadeAtual = function(velocidadeAtual) {  
+                this.velocidadeAtual = velocidadeAtual
+            }
+
+            this.acelerar = function() {
+                var velocidade = this.getVelocidadeAtual() + 50
+                velocidade = velocidade > velocidadeMaxima ? velocidadeMaxima : velocidade
+                this.setVelocidadeAtual(velocidade)
+            }
+        }
+
+        let carro = new Carro();
+        console.log(carro.getVelocidadeAtual())
+        carro.acelerar()
+        console.log(carro.getVelocidadeAtual())
+        carro.acelerar()
+        console.log(carro.getVelocidadeAtual())
+        carro.acelerar()
+        console.log(carro.getVelocidadeAtual())
+        carro.acelerar()
+        console.log(carro.getVelocidadeAtual())
+        carro.acelerar()
+        console.log(carro.getVelocidadeAtual())
+        //carro.velocidadeAtual = 100
+        //console.log(carro.getVelocidadeAtual())
+
+
+    </script>
+</body>
+</html>
