@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Obejto Literal</title>
+</head>
+<body>
+    <script>
+        let nome = 'Matheus'
+        let idade = 19
+        let sexo = 'Masculino'
+        let profissao = 'Desenvolvedor'
+
+        // Sintaxe ES5
+        let objeto1 = {
+            nome: nome,
+            idade: idade,
+            sexo: sexo,
+            profissao: profissao,
+            exibirResumo: function() {
+                console.log(`${this.nome}, ${idade} anos, ${this.sexo}, ${this.profissao}`)
+            }
+        }
+
+        objeto1.exibirResumo()
+
+        // Sintaxe ES6
+        let objeto2 = {
+            nome, // = nome: nome,
+            idade,
+            sexo,
+            profissao,
+            exibirResumo() { // = exibirResumo: function() {...}
+                console.log(`${this.nome}, ${idade} anos, ${this.sexo}, ${this.profissao}`)
+            }
+        }
+
+        objeto2.exibirResumo()
+    </script>
+</body>
+</html>
