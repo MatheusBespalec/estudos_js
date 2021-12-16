@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pilar da Herança</title>
+</head>
+<body>
+    <script>
+        /*
+        * O pilar da herança trás 2 principais vantagens para o nosso código, a primeira é o fato de que nosso código se tornara
+        * mais reutilizavel, e portanto, menos redundante, o que nos traz a segunda vantagem que por ser menos redundante nos
+        * ajuda na manutenção do código
+        */
+       class Animal {
+           constructor(cor, peso) {
+               this.cor = cor
+               this.peso = peso
+           }
+
+           dormir() {
+               console.log('Dormindo...')
+           }
+       }
+
+       class Cachorro extends Animal {
+           constructor(orelhas, cor, peso) {
+               /* 
+               * O super é obrigatório para herdar métodos e atributos da classe pai, além de nos permitir passar parametros
+               * para p método contrutor da classe pai
+               */
+               super(cor, peso)
+               this.orelhas = orelhas
+           }
+
+           rosnar() {
+               console.log('Cachorro rosnando!')
+           }
+           
+           correr() {
+               console.log('Cachorro correndo!')
+           }
+       }
+
+       class Passaro extends Animal {
+           constructor(bico, cor, peso) {
+               super(cor, peso)
+               this.bico = bico
+           }
+
+           voar() {
+               console.log('Passaro voando!')
+           }
+       }
+
+       class Papagaio extends Passaro {
+           constructor(sabeFalar, bico, cor, peso) {
+               super(bico, cor, peso)
+               this.sabeFalar = sabeFalar
+           }
+
+           falar() {
+                if (this.sabeFalar) {
+                    console.log('Papagaio falando...')
+                }
+           }
+       }
+
+       let cachorro = new Cachorro('Grandes e Caidas', 'Preto', 10)
+       let passaro = new Passaro('Grande', 'Branco', 3)
+       let papagaio = new Papagaio(true, 'Pequeno', 'Verde', 2)
+
+       // cachorro.dormir()
+       // passaro.voar()
+       // papagaio.dormir()
+       // papagaio.voar()
+
+       console.log(cachorro)
+       console.log(passaro)
+       console.log(papagaio)
+    </script>
+</body>
+</html>
