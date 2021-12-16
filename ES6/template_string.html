@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Template String</title>
+    </head>
+    <body>
+        <script>
+            let nome = 'Matheus'
+
+            document.write(`Olá ${nome}, 
+            tudo bem? <br>`)
+
+            function sum(n1, n2) {
+                return n1 + n2
+            }
+
+            document.write(`5 + 5 = ${sum(5, 5)} <br>`)
+            document.write(`5 x 5 = ${5 * 5} <br>`)
+
+            /*
+            * Dentro de um template string podemos inserir codigo JS que sera interpretadom interpolando as string com JS,
+            * para que o codigo seja interpolado devemos inserir ele dentro de ${} entre as {}.
+            * Demtro das chaves podemos inserir operações matematicas, funções e variaveis que o JS ira interpretar. Além disso
+            * o template string nos permite adicionar quebras de linha sem a necessidade de concatenar as linhas 
+             */
+        </script>
+    </body>
+</html>
