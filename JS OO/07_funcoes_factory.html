@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Funções Factory</title>
+    </head>
+    <body>
+        <script>
+            let BicicletaFactory = function(cor, aro) {
+                return {
+                    cor,
+                    aro,
+                    pedalar() { console.log('Pedalando...') }
+                }
+            }
+
+            bicicleta1 = new BicicletaFactory('Vermelha', 12)
+            console.log(bicicleta1)
+            bicicleta1.pedalar()
+
+            bicicleta2 = new BicicletaFactory('Branca', 20)
+            console.log(bicicleta2)
+        </script>
+    </body>
+</html>
