@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Pilar da Abstração</title>
+    </head>
+    <body>
+        <script>
+            // Entidade
+            class ContaBancaria{
+                //Metodo Construtor
+                constructor() {
+                    // Atributos / Características
+                    this.saldo = 100
+                    this.limite = 300
+                    this.agencia = 1045
+                    this.numeroConta = 24668213476
+                }
+
+                // Métodos / Ações
+                depositar(valorDeposito) {
+                    this.saldo+= valorDeposito
+                }
+
+                sacar(valorSaque) {
+                    this.saldo-= valorSaque
+                }
+
+                exibirSaldo() {
+                    console.log(this.saldo)
+                }
+            }
+
+            //Indentidade
+            x = new ContaBancaria();
+
+            x.exibirSaldo()
+            x.depositar(200)
+            x.exibirSaldo()
+            x.sacar(150)
+            x.exibirSaldo()
+        </script>
+    </body>
+</html>

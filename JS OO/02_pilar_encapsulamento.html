@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pilar do Encapsulamento</title>
+</head>
+<body>
+    <script>
+        /*
+        * O pilar do encapsulamento consiste em encapsular o objeto de modo a torna-lo seguro, é uma forma de dar visibilidade 
+        * para atributos e metodos de acordo com a necessidade
+        */
+        class Tv{
+            constructor() {
+                /*
+                * No JS ES6 os operadores de visibilidade (public, private e protected) ainda não são suportados,
+                * para definir um atributo como privado, por convenção, utilizamos um _ antes do nome da variavel,
+                * isso não impede que ela seja acessada fora da classe, porém é um boa pratica
+                */
+                this._canais = [2, 5 , 4 , 6, 9, 11, 12]
+                this._canalAtivo = 2
+                this.volume = 5
+            }
+
+            /*
+            * Para pegar o valor de um atributo privado, assim como em outras lingugens devemos acessar através de um método,
+            * nos métodods getter por padrão usamos o nome da variavel sem _ e antes do nome do método utilizamos o get.
+            */
+            get canalAtivo() {
+                console.log(this._canalAtivo)
+            }
+
+            /*
+            * Os métodos setters funcionam da mesma maneira que os getter, sendo até nomeados da mesma forma(serão direnciados
+            * pelo get e set que antecedem o nome do método), com a diferença de utilizarmos o set ao invés de get
+            */
+            set canalAtivo(canal) {
+                if(this._canais.indexOf(canal) != -1) {
+                    this._canalAtivo = canal
+                }
+            }
+        }
+
+        let tv = new Tv()
+
+        // Para chamar um metodo getter não é necessario utilizar os (), como ele foi definido com get o JS consegue identificar
+        tv.canalAtivo
+        // Quando chamos com () os JS indentifica que estamos falando do método setter
+        tv.canalAtivo(11)
+        tv.canalAtivo
+    </script>
+</body>
+</html>
