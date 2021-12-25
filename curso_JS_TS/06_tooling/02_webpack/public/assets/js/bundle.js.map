@@ -1,0 +1,1 @@
+{"version":3,"file":"bundle.js","mappings":"AAGAA,MAAM","sources":["webpack://02_webpack/./src/index.js"],"sourcesContent":["let name = 'Matheus'\r\nlet fruits = ['Maça', 'Melão']\r\n\r\nalert('teste')"],"names":["alert"],"sourceRoot":""}
